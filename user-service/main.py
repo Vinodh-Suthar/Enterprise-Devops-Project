@@ -1,10 +1,14 @@
 from fastapi import FastAPI
+import datetime
 
 app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Devops App is running"}
+    return {
+            "message": "Devops App is running"
+            "Timestamp" : str(datetime.datetime.now())
+            }
 
 @app.get("/health")
 def health():
@@ -12,6 +16,7 @@ def health():
             "Status" : "Healthy",
             "Service" : "User-Service",
             "Version" : "1.0"
+            "Time" : str(datetime.datetime.now())
 
             }
 
