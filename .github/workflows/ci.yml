@@ -38,4 +38,4 @@ jobs:
         sudo apt-get install -y trivy
 
     - name: Scan Docker Image
-      run: trivy image user-service
+      run: trivy image vinodhsuthar/user-service:latest
